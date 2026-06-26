@@ -3,6 +3,7 @@ package net.evolvingreaims.evolvingrealms.registry;
 import net.evolvingreaims.evolvingrealms.EvolvingRealms;
 import net.evolvingreaims.evolvingrealms.item.*;
 import net.minecraft.item.*;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -34,10 +35,10 @@ public final class ModItems {
     public static final Item PYRITE_SHOVEL  = register("pyrite_shovel",  new ShovelItem(ModToolMaterials.PYRITE,  new Item.Settings().attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.PYRITE, 1.5f, -3.0f))));
     public static final Item PYRITE_HOE     = register("pyrite_hoe",     new HoeItem(ModToolMaterials.PYRITE,     new Item.Settings().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.PYRITE, -3, 0))));
 
-    public static final Item PYRITE_HELMET     = register("pyrite_helmet",     new ArmorItem(ModArmorMaterials.PYRITE, ArmorItem.Type.HELMET,     new Item.Settings()));
-    public static final Item PYRITE_CHESTPLATE = register("pyrite_chestplate", new ArmorItem(ModArmorMaterials.PYRITE, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
-    public static final Item PYRITE_LEGGINGS   = register("pyrite_leggings",   new ArmorItem(ModArmorMaterials.PYRITE, ArmorItem.Type.LEGGINGS,   new Item.Settings()));
-    public static final Item PYRITE_BOOTS      = register("pyrite_boots",      new ArmorItem(ModArmorMaterials.PYRITE, ArmorItem.Type.BOOTS,      new Item.Settings()));
+    public static final Item PYRITE_HELMET     = register("pyrite_helmet",     new ArmorItem(ModArmorMaterials.PYRITE, EquipmentType.HELMET,     new Item.Settings()));
+    public static final Item PYRITE_CHESTPLATE = register("pyrite_chestplate", new ArmorItem(ModArmorMaterials.PYRITE, EquipmentType.CHESTPLATE, new Item.Settings()));
+    public static final Item PYRITE_LEGGINGS   = register("pyrite_leggings",   new ArmorItem(ModArmorMaterials.PYRITE, EquipmentType.LEGGINGS,   new Item.Settings()));
+    public static final Item PYRITE_BOOTS      = register("pyrite_boots",      new ArmorItem(ModArmorMaterials.PYRITE, EquipmentType.BOOTS,      new Item.Settings()));
 
     public static final Item VOLCANIUM_SWORD   = register("volcanium_sword",   new VolcaniumSwordItem(ModToolMaterials.VOLCANIUM, new Item.Settings().rarity(Rarity.RARE).attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.VOLCANIUM, 5, -2.2f))));
     public static final Item VOLCANIUM_PICKAXE = register("volcanium_pickaxe", new VolcaniumPickaxeItem(ModToolMaterials.VOLCANIUM, new Item.Settings().rarity(Rarity.RARE).attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.VOLCANIUM, 3, -2.6f))));
@@ -45,10 +46,10 @@ public final class ModItems {
     public static final Item VOLCANIUM_SHOVEL  = register("volcanium_shovel",  new VolcaniumShovelItem(ModToolMaterials.VOLCANIUM,  new Item.Settings().rarity(Rarity.RARE).attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.VOLCANIUM, 2, -2.8f))));
     public static final Item VOLCANIUM_HOE     = register("volcanium_hoe",     new HoeItem(ModToolMaterials.VOLCANIUM,              new Item.Settings().rarity(Rarity.RARE).attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.VOLCANIUM, -5, 0))));
 
-    public static final Item VOLCANIUM_HELMET     = register("volcanium_helmet",     new VolcaniumArmorItem(ModArmorMaterials.VOLCANIUM, ArmorItem.Type.HELMET,     new Item.Settings().rarity(Rarity.RARE)));
-    public static final Item VOLCANIUM_CHESTPLATE = register("volcanium_chestplate", new VolcaniumArmorItem(ModArmorMaterials.VOLCANIUM, ArmorItem.Type.CHESTPLATE, new Item.Settings().rarity(Rarity.RARE)));
-    public static final Item VOLCANIUM_LEGGINGS   = register("volcanium_leggings",   new VolcaniumArmorItem(ModArmorMaterials.VOLCANIUM, ArmorItem.Type.LEGGINGS,   new Item.Settings().rarity(Rarity.RARE)));
-    public static final Item VOLCANIUM_BOOTS      = register("volcanium_boots",      new VolcaniumArmorItem(ModArmorMaterials.VOLCANIUM, ArmorItem.Type.BOOTS,      new Item.Settings().rarity(Rarity.RARE)));
+    public static final Item VOLCANIUM_HELMET     = register("volcanium_helmet",     new VolcaniumArmorItem(ModArmorMaterials.VOLCANIUM, EquipmentType.HELMET,     new Item.Settings().rarity(Rarity.RARE)));
+    public static final Item VOLCANIUM_CHESTPLATE = register("volcanium_chestplate", new VolcaniumArmorItem(ModArmorMaterials.VOLCANIUM, EquipmentType.CHESTPLATE, new Item.Settings().rarity(Rarity.RARE)));
+    public static final Item VOLCANIUM_LEGGINGS   = register("volcanium_leggings",   new VolcaniumArmorItem(ModArmorMaterials.VOLCANIUM, EquipmentType.LEGGINGS,   new Item.Settings().rarity(Rarity.RARE)));
+    public static final Item VOLCANIUM_BOOTS      = register("volcanium_boots",      new VolcaniumArmorItem(ModArmorMaterials.VOLCANIUM, EquipmentType.BOOTS,      new Item.Settings().rarity(Rarity.RARE)));
 
     public static final Item SULFUR_COMPASS = register("sulfur_compass",
             new SulfurCompassItem(new Item.Settings().maxCount(1).rarity(Rarity.UNCOMMON)));

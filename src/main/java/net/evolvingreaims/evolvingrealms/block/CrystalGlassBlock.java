@@ -1,11 +1,24 @@
 package net.evolvingreaims.evolvingrealms.block;
 
-import net.minecraft.block.GlassBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.entity.EntityType;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.BlockView;
 
-/**
- * Crystal Glass — transparent, luminous glass made from sulfur crystals.
- */
-public class CrystalGlassBlock extends GlassBlock {
+public class CrystalGlassBlock extends Block {
 
-    public CrystalGlassBlock(Settings settings) { super(settings); }
+    public CrystalGlassBlock(Settings settings) {
+        super(settings);
+    }
+
+    @Override
+    public boolean isTransparent(BlockState state, BlockView world, BlockPos pos) {
+        return true;
+    }
+
+    @Override
+    public boolean allowsSpawning(BlockState state, BlockView world, BlockPos pos, EntityType<?> type) {
+        return false;
+    }
 }

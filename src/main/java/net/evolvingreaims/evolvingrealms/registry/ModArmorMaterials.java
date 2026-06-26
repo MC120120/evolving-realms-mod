@@ -1,65 +1,52 @@
 package net.evolvingreaims.evolvingrealms.registry;
 
 import net.evolvingreaims.evolvingrealms.EvolvingRealms;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
-import net.minecraft.recipe.Ingredient;
+import net.minecraft.item.Item;
+import net.minecraft.item.equipment.ArmorMaterial;
+import net.minecraft.item.equipment.EquipmentAsset;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Util;
 
-import java.util.EnumMap;
-import java.util.List;
+import java.util.Map;
 
 public final class ModArmorMaterials {
 
-    public static final RegistryEntry<ArmorMaterial> PYRITE = register("pyrite",
-            Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-                map.put(ArmorItem.Type.BOOTS,      3);
-                map.put(ArmorItem.Type.LEGGINGS,   6);
-                map.put(ArmorItem.Type.CHESTPLATE, 8);
-                map.put(ArmorItem.Type.HELMET,     3);
-                map.put(ArmorItem.Type.BODY,       11);
-            }),
+    public static final ArmorMaterial PYRITE = new ArmorMaterial(
             16,
-            SoundEvents.ITEM_ARMOR_EQUIP_IRON,
-            0.5f, 0.1f,
-            () -> Ingredient.ofItems(ModItems.PYRITE_INGOT));
+            Map.of(
+                EquipmentType.HELMET,     3,
+                EquipmentType.CHESTPLATE, 8,
+                EquipmentType.LEGGINGS,   6,
+                EquipmentType.BOOTS,      3
+            ),
+            16,
+            Registries.SOUND_EVENT.getEntry(SoundEvents.ITEM_ARMOR_EQUIP_IRON),
+            0.5f,
+            0.1f,
+            TagKey.of(RegistryKeys.ITEM, Identifier.of(EvolvingRealms.MOD_ID, "pyrite_ingots")),
+            RegistryKey.of(EquipmentAsset.REGISTRY_KEY, Identifier.of(EvolvingRealms.MOD_ID, "pyrite"))
+    );
 
-    public static final RegistryEntry<ArmorMaterial> VOLCANIUM = register("volcanium",
-            Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-                map.put(ArmorItem.Type.BOOTS,      4);
-                map.put(ArmorItem.Type.LEGGINGS,   8);
-                map.put(ArmorItem.Type.CHESTPLATE, 11);
-                map.put(ArmorItem.Type.HELMET,     4);
-                map.put(ArmorItem.Type.BODY,       15);
-            }),
+    public static final ArmorMaterial VOLCANIUM = new ArmorMaterial(
+            37,
+            Map.of(
+                EquipmentType.HELMET,     4,
+                EquipmentType.CHESTPLATE, 11,
+                EquipmentType.LEGGINGS,   8,
+                EquipmentType.BOOTS,      4
+            ),
             6,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
-            4.0f, 0.3f,
-            () -> Ingredient.ofItems(ModItems.VOLCANIUM_INGOT));
-
-    private static RegistryEntry<ArmorMaterial> register(
-            String name,
-            EnumMap<ArmorItem.Type, Integer> defense,
-            int enchantability,
-            net.minecraft.sound.SoundEvent equipSound,
-            float toughness,
-            float knockbackResistance,
-            java.util.function.Supplier<Ingredient> repairIngredient) {
-
-        Identifier id = Identifier.of(EvolvingRealms.MOD_ID, name);
-        ArmorMaterial material = new ArmorMaterial(
-                defense, enchantability,
-                Registries.SOUND_EVENT.getEntry(equipSound).orElseThrow(),
-                repairIngredient,
-                List.of(new ArmorMaterial.Layer(id)),
-                toughness, knockbackResistance);
-        return Registry.registerReference(Registries.ARMOR_MATERIAL, id, material);
-    }
+            Registries.SOUND_EVENT.getEntry(SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE),
+            4.0f,
+            0.3f,
+            TagKey.of(RegistryKeys.ITEM, Identifier.of(EvolvingRealms.MOD_ID, "volcanium_ingots")),
+            RegistryKey.of(EquipmentAsset.REGISTRY_KEY, Identifier.of(EvolvingRealms.MOD_ID, "volcanium"))
+    );
 
     private ModArmorMaterials() {}
 }

@@ -11,7 +11,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.TeleportTarget;
 import net.minecraft.world.World;
@@ -27,7 +27,7 @@ public class DimensionKeyItem extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+    public ActionResult use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
 
         if (!world.isClient && user instanceof ServerPlayerEntity serverPlayer) {
@@ -61,6 +61,6 @@ public class DimensionKeyItem extends Item {
             }
         }
 
-        return TypedActionResult.success(stack, world.isClient());
+        return ActionResult.SUCCESS;
     }
 }

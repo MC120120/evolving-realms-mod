@@ -13,7 +13,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -29,13 +29,13 @@ public class TitanSummoningIdolItem extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+    public ActionResult use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
 
         if (!world.isClient) {
             if (!world.getRegistryKey().equals(ModDimensions.SULFUR_DIMENSION_KEY)) {
                 user.sendMessage(Text.literal("§cThe Idol only resonates within the Sulfur Dimension!"), true);
-                return TypedActionResult.fail(stack);
+                return ActionResult.FAIL;
             }
 
             ServerWorld serverWorld = (ServerWorld) world;
@@ -65,6 +65,6 @@ public class TitanSummoningIdolItem extends Item {
             }
         }
 
-        return TypedActionResult.success(stack, world.isClient());
+        return ActionResult.SUCCESS;
     }
 }

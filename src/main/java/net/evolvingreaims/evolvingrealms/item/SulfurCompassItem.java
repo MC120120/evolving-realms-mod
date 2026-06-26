@@ -8,7 +8,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
 
 /**
@@ -23,7 +23,7 @@ public class SulfurCompassItem extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+    public ActionResult use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
 
         if (!world.isClient && user instanceof ServerPlayerEntity serverPlayer) {
@@ -45,7 +45,7 @@ public class SulfurCompassItem extends Item {
             }
         }
 
-        return TypedActionResult.success(stack, world.isClient());
+        return ActionResult.SUCCESS;
     }
 
     private String getCardinal(int dx, int dz) {

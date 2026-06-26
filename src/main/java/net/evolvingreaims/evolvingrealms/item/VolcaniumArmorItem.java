@@ -4,13 +4,10 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.equipment.ArmorMaterial;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.world.World;
 
-/**
- * Volcanium Armor — when all 4 pieces are worn together the player gains
- * permanent Fire Resistance and a stacking Strength I bonus.
- */
 public class VolcaniumArmorItem extends ArmorItem {
 
     private static final StatusEffectInstance FIRE_RESISTANCE =
@@ -18,7 +15,7 @@ public class VolcaniumArmorItem extends ArmorItem {
     private static final StatusEffectInstance STRENGTH =
             new StatusEffectInstance(StatusEffects.STRENGTH, 20, 0, false, false, true);
 
-    public VolcaniumArmorItem(ArmorMaterial material, Type type, Settings settings) {
+    public VolcaniumArmorItem(ArmorMaterial material, EquipmentType type, Settings settings) {
         super(material, type, settings);
     }
 
