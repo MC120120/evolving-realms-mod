@@ -14,16 +14,8 @@ import net.minecraft.util.Util;
 import java.util.EnumMap;
 import java.util.List;
 
-/**
- * Custom armor materials for Evolving Realms.
- */
 public final class ModArmorMaterials {
 
-    /**
-     * Pyrite Armor — mid-tier between Iron and Diamond.
-     * Higher durability than Iron; less toughness than Diamond.
-     * Natural fire resistance passive (half fire damage).
-     */
     public static final RegistryEntry<ArmorMaterial> PYRITE = register("pyrite",
             Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
                 map.put(ArmorItem.Type.BOOTS,      3);
@@ -32,17 +24,11 @@ public final class ModArmorMaterials {
                 map.put(ArmorItem.Type.HELMET,     3);
                 map.put(ArmorItem.Type.BODY,       11);
             }),
-            16,                                // enchantability
-            SoundEvents.ITEM_ARMOR_EQUIP_IRON, // equip sound
-            0.5f,                              // toughness
-            0.1f,                              // knockback resistance
+            16,
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON,
+            0.5f, 0.1f,
             () -> Ingredient.ofItems(ModItems.PYRITE_INGOT));
 
-    /**
-     * Volcanium Armor — endgame tier.
-     * Highest protection values in the mod; glows faintly when worn.
-     * Full set bonus: fire immunity (applied via mixin).
-     */
     public static final RegistryEntry<ArmorMaterial> VOLCANIUM = register("volcanium",
             Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
                 map.put(ArmorItem.Type.BOOTS,      4);
@@ -51,10 +37,9 @@ public final class ModArmorMaterials {
                 map.put(ArmorItem.Type.HELMET,     4);
                 map.put(ArmorItem.Type.BODY,       15);
             }),
-            6,                                  // enchantability
+            6,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
-            4.0f,                               // toughness
-            0.3f,                               // knockback resistance
+            4.0f, 0.3f,
             () -> Ingredient.ofItems(ModItems.VOLCANIUM_INGOT));
 
     private static RegistryEntry<ArmorMaterial> register(
@@ -69,7 +54,7 @@ public final class ModArmorMaterials {
         Identifier id = Identifier.of(EvolvingRealms.MOD_ID, name);
         ArmorMaterial material = new ArmorMaterial(
                 defense, enchantability,
-                net.minecraft.registry.entry.RegistryEntry.of(equipSound),
+                Registries.SOUND_EVENT.getEntry(equipSound).orElseThrow(),
                 repairIngredient,
                 List.of(new ArmorMaterial.Layer(id)),
                 toughness, knockbackResistance);

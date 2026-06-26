@@ -1,15 +1,11 @@
 package net.evolvingreaims.evolvingrealms.registry;
 
 import net.evolvingreaims.evolvingrealms.EvolvingRealms;
-import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.particle.SimpleParticleType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-/**
- * Custom particle type registrations for Evolving Realms.
- */
 public final class ModParticles {
 
     public static final SimpleParticleType SULFUR_SMOKE    = register("sulfur_smoke",    false);
