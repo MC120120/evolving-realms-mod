@@ -19,6 +19,10 @@ import net.minecraft.world.World;
  */
 public class SeasonManager {
 
+    public static final SeasonManager INSTANCE = new SeasonManager();
+
+    public static SeasonManager getInstance() { return INSTANCE; }
+
     /** Days per season. Configurable via EvolvingRealmsConfig. */
     public static final int DAYS_PER_SEASON = 8;
 
@@ -100,6 +104,11 @@ public class SeasonManager {
                       false));
     }
 
+    public void save(MinecraftServer server) {
+        // Season state is derived from world time on load; nothing to persist.
+    }
+
+    public Season getCurrentSeason(net.minecraft.world.World world) { return current; }
     public Season getCurrentSeason() { return current; }
     public int    getDayInSeason()   { return dayInSeason; }
 }

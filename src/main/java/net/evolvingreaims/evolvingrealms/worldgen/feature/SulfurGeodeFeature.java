@@ -70,7 +70,7 @@ public class SulfurGeodeFeature extends Feature<DefaultFeatureConfig> {
                     int d2 = dx * dx + dy * dy + dz * dz;
                     if (d2 <= r2 && d2 > r2inner && random.nextFloat() < 0.5f) {
                         BlockPos pos = origin.add(dx, dy, dz);
-                        world.setBlockState(pos, ModBlocks.CRYSTAL_BLOCK.getDefaultState(), 3);
+                        world.setBlockState(pos, ModBlocks.CRYSTAL_BRICKS.getDefaultState(), 3);
                     }
                 }
             }

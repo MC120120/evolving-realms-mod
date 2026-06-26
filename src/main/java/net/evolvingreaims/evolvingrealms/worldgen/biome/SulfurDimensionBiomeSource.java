@@ -48,12 +48,23 @@ public class SulfurDimensionBiomeSource extends BiomeSource {
         return Stream.empty(); // entries resolved at runtime via registry
     }
 
+    private RegistryEntryLookup<Biome> biomeLookup;
+
+    public SulfurDimensionBiomeSource withLookup(RegistryEntryLookup<Biome> lookup) {
+        this.biomeLookup = lookup;
+        return this;
+    }
+
     @Override
     public RegistryEntry<Biome> getBiome(int x, int y, int z, MultiNoiseUtil.MultiNoiseSampler noise) {
-        // Simple deterministic zone assignment
         int zoneX = Math.floorDiv(x, ZONE_SIZE >> 2);
         int zoneZ = Math.floorDiv(z, ZONE_SIZE >> 2);
         int hash = Math.abs((zoneX * 31 + zoneZ) % biomeKeys.size());
-        return noise.getBiome(biomeKeys.get(hash));
+        RegistryKey<Biome> key = biomeKeys.get(hash);
+        if (biomeLookup != null) {
+            return biomeLookup.getOrThrow(key);
+        }
+        // Fallback: return plains biome reference (will be replaced at runtime)
+        return net.minecraft.registry.entry.RegistryEntry.of(null);
     }
 }

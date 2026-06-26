@@ -73,10 +73,9 @@ public class SulfurSlimeEntity extends HostileEntity {
                 this.getWorld().setBlockState(pos,
                         net.evolvingreaims.evolvingrealms.registry.ModBlocks.LIQUID_SULFUR_BLOCK.getDefaultState());
             }
-            // Split into smaller slimes (3 small ones)
+            // Spawn vanilla small slimes as split
             for (int i = 0; i < 2; i++) {
-                SulfurSlimeMiniEntity mini = new SulfurSlimeMiniEntity(
-                        net.evolvingreaims.evolvingrealms.registry.ModEntities.SULFUR_SLIME, this.getWorld());
+                SlimeEntity mini = new SlimeEntity(net.minecraft.entity.EntityType.SLIME, this.getWorld());
                 double ox = (random.nextDouble() - 0.5) * 2;
                 double oz = (random.nextDouble() - 0.5) * 2;
                 mini.refreshPositionAndAngles(this.getX() + ox, this.getY(), this.getZ() + oz, 0, 0);

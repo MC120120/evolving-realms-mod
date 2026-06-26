@@ -143,19 +143,19 @@ public final class ModBlocks {
     public static final Block BURNT_WOOD    = register("burnt_wood",    new PillarBlock(Block.Settings.copy(Blocks.OAK_WOOD).sounds(BlockSoundGroup.WOOD)));
     public static final Block BURNT_PLANKS  = register("burnt_planks",  new Block(Block.Settings.copy(Blocks.OAK_PLANKS)));
     public static final Block BURNT_LEAVES  = register("burnt_leaves",  new LeavesBlock(Block.Settings.copy(Blocks.OAK_LEAVES)));
-    public static final Block BURNT_SAPLING = register("burnt_sapling", new SaplingBlock(new BurntSaplingGenerator(), Block.Settings.copy(Blocks.OAK_SAPLING)), false);
+    public static final Block BURNT_SAPLING = register("burnt_sapling", new SaplingBlock(BurntSaplingGenerator.INSTANCE, Block.Settings.copy(Blocks.OAK_SAPLING)), false);
 
     public static final Block SULFUR_LOG     = register("sulfur_log",     new PillarBlock(Block.Settings.create().strength(2.0f).sounds(ModSoundGroups.SULFUR)));
     public static final Block SULFUR_WOOD    = register("sulfur_wood",    new PillarBlock(Block.Settings.copy(SULFUR_LOG)));
     public static final Block SULFUR_PLANKS  = register("sulfur_planks",  new Block(Block.Settings.copy(SULFUR_LOG)));
     public static final Block SULFUR_LEAVES  = register("sulfur_leaves",  new LeavesBlock(Block.Settings.create().strength(0.2f).sounds(BlockSoundGroup.GRASS).nonOpaque().luminance(s -> 3)));
-    public static final Block SULFUR_SAPLING = register("sulfur_sapling", new SaplingBlock(new SulfurSaplingGenerator(), Block.Settings.copy(Blocks.OAK_SAPLING)), false);
+    public static final Block SULFUR_SAPLING = register("sulfur_sapling", new SaplingBlock(SulfurSaplingGenerator.INSTANCE, Block.Settings.copy(Blocks.OAK_SAPLING)), false);
 
     public static final Block CRYSTAL_LOG     = register("crystal_log",     new CrystalLogBlock(Block.Settings.create().strength(3.0f).sounds(ModSoundGroups.CRYSTAL).luminance(s -> 6)));
     public static final Block CRYSTAL_WOOD    = register("crystal_wood",    new CrystalLogBlock(Block.Settings.copy(CRYSTAL_LOG)));
     public static final Block CRYSTAL_PLANKS  = register("crystal_planks",  new Block(Block.Settings.copy(CRYSTAL_LOG)));
     public static final Block CRYSTAL_LEAVES  = register("crystal_leaves",  new LeavesBlock(Block.Settings.create().strength(0.2f).sounds(ModSoundGroups.CRYSTAL).nonOpaque().luminance(s -> 10)));
-    public static final Block CRYSTAL_SAPLING = register("crystal_sapling", new SaplingBlock(new CrystalSaplingGenerator(), Block.Settings.copy(Blocks.OAK_SAPLING)), false);
+    public static final Block CRYSTAL_SAPLING = register("crystal_sapling", new SaplingBlock(CrystalSaplingGenerator.INSTANCE, Block.Settings.copy(Blocks.OAK_SAPLING)), false);
 
     public static final Block ACID_BLOCK          = register("acid",          new AcidBlock(Block.Settings.create().replaceable().liquid().noCollision().dropsNothing().ticksRandomly()), false);
     public static final Block LIQUID_SULFUR_BLOCK = register("liquid_sulfur", new LiquidSulfurBlock(Block.Settings.create().replaceable().liquid().noCollision().dropsNothing().ticksRandomly().luminance(s -> 7)), false);

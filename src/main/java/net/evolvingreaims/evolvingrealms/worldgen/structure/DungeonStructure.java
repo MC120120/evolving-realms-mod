@@ -32,7 +32,7 @@ public class DungeonStructure extends Structure {
         BlockPos origin = context.chunkPos().getCenterAtY(0);
 
         // Find surface height at centre
-        int surfaceY = context.chunkGenerator().getHeightInGround(
+        int surfaceY = context.chunkGenerator().getHeight(
                 origin.getX(), origin.getZ(),
                 Heightmap.Type.WORLD_SURFACE_WG,
                 context.world(), context.noiseConfig());

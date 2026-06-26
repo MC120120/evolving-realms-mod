@@ -12,7 +12,7 @@ public final class DimensionUtil {
     private DimensionUtil() {}
 
     public static boolean isInSulfurDimension(World world) {
-        return world.getRegistryKey().equals(ModDimensions.SULFUR_DIMENSION_KEY);
+        return world.getRegistryKey().equals(ModDimensions.SULFUR_DIMENSION);
     }
 
     public static boolean isInOverworld(World world) {

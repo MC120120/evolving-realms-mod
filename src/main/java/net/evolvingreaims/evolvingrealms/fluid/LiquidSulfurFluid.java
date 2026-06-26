@@ -6,6 +6,7 @@ import net.evolvingreaims.evolvingrealms.registry.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
+import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.item.Item;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
@@ -13,12 +14,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
-import net.minecraft.fluid.FlowableFluid;
 
-/**
- * Liquid Sulfur fluid — viscous (flow speed 2), glows faintly (luminance via block),
- * slows movement and applies Slowness I to players wading through it.
- */
 public abstract class LiquidSulfurFluid extends FlowableFluid {
 
     @Override
@@ -51,22 +47,12 @@ public abstract class LiquidSulfurFluid extends FlowableFluid {
     }
 
     @Override
-    protected int getFlowSpeed(WorldAccess world) { return 2; } // slower than water
-
-    @Override
-    protected int getLevelDecreasePerBlock(WorldAccess world) { return 3; } // limited spread
-
-    @Override
-    public int getLevel(FluidState state) {
-        return isStill(state) ? 8 : state.get(LEVEL);
-    }
-
-    @Override
-    public boolean isStill(FluidState state) { return false; }
+    protected int getFlowSpeed(WorldAccess world) { return 2; }
 
     public static class Source extends LiquidSulfurFluid {
         @Override public int getLevel(FluidState state) { return 8; }
         @Override public boolean isStill(FluidState state) { return true; }
+        @Override protected int getLevelDecreasePerBlock(WorldAccess world) { return 1; }
     }
 
     public static class Flowing extends LiquidSulfurFluid {
@@ -77,5 +63,6 @@ public abstract class LiquidSulfurFluid extends FlowableFluid {
         }
         @Override public int getLevel(FluidState state) { return state.get(LEVEL); }
         @Override public boolean isStill(FluidState state) { return false; }
+        @Override protected int getLevelDecreasePerBlock(WorldAccess world) { return 3; }
     }
 }

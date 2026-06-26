@@ -10,7 +10,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
 
-import java.util.Random;
+import net.minecraft.util.math.random.Random;
 
 /**
  * Tree Growth System — simulates natural tree lifecycle.
@@ -31,17 +31,19 @@ public class TreeGrowthSystem {
     private static final int SEED_SPREAD_CHANCE   = 200; // 1/200 per leaf block per sample
     private static final int TREE_DEATH_CHANCE    = 800; // 1/800 per log per sample
 
-    private final Random rng = new Random();
+    private final net.minecraft.util.math.random.Random rng = net.minecraft.util.math.random.Random.create();
 
     public void tick(ServerWorld world, SeasonManager.Season season) {
         if (!world.getGameRules().getBoolean(net.minecraft.world.GameRules.DO_MOB_GRIEFING)) return;
 
-        Iterable<ChunkPos> loaded = world.getChunkManager().getLoadedChunkPositions()::iterator;
-        int samples = 0;
-
-        for (ChunkPos chunk : loaded) {
-            if (samples++ >= SAMPLES_PER_TICK) break;
-            processChunk(world, chunk, season);
+        // Sample up to SAMPLES_PER_TICK random chunks near players
+        java.util.List<net.minecraft.server.network.ServerPlayerEntity> players = world.getPlayers();
+        if (players.isEmpty()) return;
+        for (int s = 0; s < SAMPLES_PER_TICK; s++) {
+            net.minecraft.server.network.ServerPlayerEntity player = players.get(rng.nextInt(players.size()));
+            int chunkX = player.getChunkPos().x + rng.nextBetween(-4, 4);
+            int chunkZ = player.getChunkPos().z + rng.nextBetween(-4, 4);
+            processChunk(world, new ChunkPos(chunkX, chunkZ), season);
         }
     }
 
@@ -49,7 +51,7 @@ public class TreeGrowthSystem {
         int baseX = chunk.getStartX() + rng.nextInt(16);
         int baseZ = chunk.getStartZ() + rng.nextInt(16);
 
-        for (int y = world.getBottomY(); y < world.getTopY(); y++) {
+        for (int y = world.getBottomY(); y < world.getTopYInclusive(net.minecraft.world.Heightmap.Type.WORLD_SURFACE, baseX, baseZ); y++) {
             BlockPos pos = new BlockPos(baseX, y, baseZ);
 
             if (world.getBlockState(pos).getBlock() instanceof LeavesBlock) {
@@ -61,7 +63,7 @@ public class TreeGrowthSystem {
                 }
                 // Autumn: leaves decay faster (vanilla already handles this, we accelerate)
                 if (season == SeasonManager.Season.AUTUMN && rng.nextInt(50) == 0) {
-                    if (world.getBlockState(pos).get(LeavesBlock.PERSISTENT).equals(false)) {
+                    if (!world.getBlockState(pos).get(LeavesBlock.PERSISTENT)) {
                         world.breakBlock(pos, true);
                     }
                 }

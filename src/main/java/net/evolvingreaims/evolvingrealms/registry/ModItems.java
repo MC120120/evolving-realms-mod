@@ -29,22 +29,22 @@ public final class ModItems {
     public static final Item SULFUR_PHANTOM_WING = register("sulfur_phantom_wing", new Item(new Item.Settings()));
     public static final Item CRYSTAL_GOLEM_HEART = register("crystal_golem_heart", new Item(new Item.Settings().rarity(Rarity.RARE)));
 
-    public static final Item PYRITE_SWORD   = register("pyrite_sword",   new SwordItem(ModToolMaterials.PYRITE,   new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.PYRITE, 3, -2.4f))));
-    public static final Item PYRITE_PICKAXE = register("pyrite_pickaxe", new PickaxeItem(ModToolMaterials.PYRITE, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.PYRITE, 1, -2.8f))));
-    public static final Item PYRITE_AXE     = register("pyrite_axe",     new AxeItem(ModToolMaterials.PYRITE,     new Item.Settings().attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.PYRITE, 6, -3.1f))));
-    public static final Item PYRITE_SHOVEL  = register("pyrite_shovel",  new ShovelItem(ModToolMaterials.PYRITE,  new Item.Settings().attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.PYRITE, 1.5f, -3.0f))));
-    public static final Item PYRITE_HOE     = register("pyrite_hoe",     new HoeItem(ModToolMaterials.PYRITE,     new Item.Settings().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.PYRITE, -3, 0))));
+    public static final Item PYRITE_SWORD   = register("pyrite_sword",   new SwordItem(ModToolMaterials.PYRITE,   new Item.Settings())));
+    public static final Item PYRITE_PICKAXE = register("pyrite_pickaxe", new PickaxeItem(ModToolMaterials.PYRITE, new Item.Settings())));
+    public static final Item PYRITE_AXE     = register("pyrite_axe",     new AxeItem(ModToolMaterials.PYRITE,     new Item.Settings())));
+    public static final Item PYRITE_SHOVEL  = register("pyrite_shovel",  new ShovelItem(ModToolMaterials.PYRITE,  new Item.Settings())));
+    public static final Item PYRITE_HOE     = register("pyrite_hoe",     new HoeItem(ModToolMaterials.PYRITE,     new Item.Settings())));
 
     public static final Item PYRITE_HELMET     = register("pyrite_helmet",     new ArmorItem(ModArmorMaterials.PYRITE, EquipmentType.HELMET,     new Item.Settings()));
     public static final Item PYRITE_CHESTPLATE = register("pyrite_chestplate", new ArmorItem(ModArmorMaterials.PYRITE, EquipmentType.CHESTPLATE, new Item.Settings()));
     public static final Item PYRITE_LEGGINGS   = register("pyrite_leggings",   new ArmorItem(ModArmorMaterials.PYRITE, EquipmentType.LEGGINGS,   new Item.Settings()));
     public static final Item PYRITE_BOOTS      = register("pyrite_boots",      new ArmorItem(ModArmorMaterials.PYRITE, EquipmentType.BOOTS,      new Item.Settings()));
 
-    public static final Item VOLCANIUM_SWORD   = register("volcanium_sword",   new VolcaniumSwordItem(ModToolMaterials.VOLCANIUM, new Item.Settings().rarity(Rarity.RARE).attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.VOLCANIUM, 5, -2.2f))));
-    public static final Item VOLCANIUM_PICKAXE = register("volcanium_pickaxe", new VolcaniumPickaxeItem(ModToolMaterials.VOLCANIUM, new Item.Settings().rarity(Rarity.RARE).attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.VOLCANIUM, 3, -2.6f))));
-    public static final Item VOLCANIUM_AXE     = register("volcanium_axe",     new VolcaniumAxeItem(ModToolMaterials.VOLCANIUM,    new Item.Settings().rarity(Rarity.RARE).attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.VOLCANIUM, 8, -2.9f))));
-    public static final Item VOLCANIUM_SHOVEL  = register("volcanium_shovel",  new VolcaniumShovelItem(ModToolMaterials.VOLCANIUM,  new Item.Settings().rarity(Rarity.RARE).attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.VOLCANIUM, 2, -2.8f))));
-    public static final Item VOLCANIUM_HOE     = register("volcanium_hoe",     new HoeItem(ModToolMaterials.VOLCANIUM,              new Item.Settings().rarity(Rarity.RARE).attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.VOLCANIUM, -5, 0))));
+    public static final Item VOLCANIUM_SWORD   = register("volcanium_sword",   new VolcaniumSwordItem(ModToolMaterials.VOLCANIUM, new Item.Settings().rarity(Rarity.RARE))));
+    public static final Item VOLCANIUM_PICKAXE = register("volcanium_pickaxe", new VolcaniumPickaxeItem(ModToolMaterials.VOLCANIUM, new Item.Settings().rarity(Rarity.RARE))));
+    public static final Item VOLCANIUM_AXE     = register("volcanium_axe",     new VolcaniumAxeItem(ModToolMaterials.VOLCANIUM,    new Item.Settings().rarity(Rarity.RARE))));
+    public static final Item VOLCANIUM_SHOVEL  = register("volcanium_shovel",  new VolcaniumShovelItem(ModToolMaterials.VOLCANIUM,  new Item.Settings().rarity(Rarity.RARE))));
+    public static final Item VOLCANIUM_HOE     = register("volcanium_hoe",     new HoeItem(ModToolMaterials.VOLCANIUM,              new Item.Settings().rarity(Rarity.RARE))));
 
     public static final Item VOLCANIUM_HELMET     = register("volcanium_helmet",     new VolcaniumArmorItem(ModArmorMaterials.VOLCANIUM, EquipmentType.HELMET,     new Item.Settings().rarity(Rarity.RARE)));
     public static final Item VOLCANIUM_CHESTPLATE = register("volcanium_chestplate", new VolcaniumArmorItem(ModArmorMaterials.VOLCANIUM, EquipmentType.CHESTPLATE, new Item.Settings().rarity(Rarity.RARE)));

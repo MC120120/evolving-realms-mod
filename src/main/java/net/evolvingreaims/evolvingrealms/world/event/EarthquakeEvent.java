@@ -83,10 +83,10 @@ public class EarthquakeEvent {
                 random.nextBetween(-radius, radius),
                 random.nextBetween(0, 20),
                 random.nextBetween(-radius, radius));
-            world.spawnParticles(ParticleTypes.FALLING_DUST,
+            world.spawnParticles(
+                new net.minecraft.particle.BlockStateParticleEffect(ParticleTypes.FALLING_DUST, Blocks.GRAVEL.getDefaultState()),
                 dustPos.getX(), dustPos.getY(), dustPos.getZ(),
-                5, 0.5, 0.2, 0.5, 0.01,
-                Blocks.GRAVEL.getDefaultState());
+                5, 0.5, 0.2, 0.5, 0.01);
         }
     }
 
