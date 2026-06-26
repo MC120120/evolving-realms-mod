@@ -1,0 +1,9 @@
+{
+  "structures": [{"structure": "evolving_realms:sulfur_dungeon", "weight": 1}],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 32,
+    "separation": 8,
+    "salt": 982571234
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {"id": "minecraft:map"},
+    "title": {"translate": "advancements.evolving_realms.find_dungeon.title"},
+    "description": {"translate": "advancements.evolving_realms.find_dungeon.description"},
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "evolving_realms:root",
+  "criteria": {
+    "loot_dungeon_chest": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {}
+    }
+  }
+}

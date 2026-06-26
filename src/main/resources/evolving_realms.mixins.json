@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "package": "net.evolvingreaims.evolvingrealms.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "MobEntityMixin",
+    "ZombieEntityMixin",
+    "SkeletonEntityMixin",
+    "SpiderEntityMixin",
+    "CreeperEntityMixin",
+    "VillagerEntityMixin",
+    "ServerWorldMixin",
+    "ChunkGeneratorMixin",
+    "WorldChunkMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

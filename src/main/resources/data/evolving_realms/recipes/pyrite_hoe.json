@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["##", " S", " S"],
+  "key": {
+    "#": {"item": "evolving_realms:pyrite_ingot"},
+    "S": {"item": "minecraft:stick"}
+  },
+  "result": {"id": "evolving_realms:pyrite_hoe", "count": 1}
+}

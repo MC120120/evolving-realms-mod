@@ -1,0 +1,38 @@
+{
+  "has_precipitation": true,
+  "temperature": 0.8,
+  "temperature_modifier": "none",
+  "downfall": 0.9,
+  "effects": {
+    "sky_color": 7340032,
+    "fog_color": 5263440,
+    "water_color": 3394611,
+    "water_fog_color": 2105376,
+    "grass_color": 4390430,
+    "foliage_color": 4997648,
+    "mood_sound": {
+      "sound": "minecraft:ambient.swamp.mood",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "ambient_sound": "evolving_realms:ambient.acid_bubbling"
+  },
+  "spawners": {
+    "monster": [
+      {"type": "evolving_realms:acid_spider",   "weight": 100, "minCount": 2, "maxCount": 4},
+      {"type": "evolving_realms:ash_zombie",    "weight": 60,  "minCount": 2, "maxCount": 4},
+      {"type": "evolving_realms:sulfur_slime",  "weight": 40,  "minCount": 1, "maxCount": 3}
+    ],
+    "creature": [],
+    "ambient":  [],
+    "water_creature": [
+      {"type": "evolving_realms:acid_fish", "weight": 100, "minCount": 3, "maxCount": 8}
+    ],
+    "water_ambient":  [],
+    "underground_water_creature": []
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [[], [], [], [], [], [], [], [], [], []]
+}

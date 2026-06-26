@@ -1,0 +1,1 @@
+{"type":"minecraft:entity","pools":[{"rolls":{"min":0,"max":1},"entries":[{"type":"minecraft:item","name":"minecraft:fish"}]},{"rolls":{"min":0,"max":1},"entries":[{"type":"minecraft:item","name":"evolving_realms:raw_sulfur"}]}]}

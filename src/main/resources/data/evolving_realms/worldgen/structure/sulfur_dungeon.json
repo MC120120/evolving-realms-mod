@@ -1,0 +1,7 @@
+{
+  "type": "evolving_realms:dungeon_structure",
+  "biomes": "#evolving_realms:has_dungeon",
+  "step": "underground_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "beard_thin"
+}

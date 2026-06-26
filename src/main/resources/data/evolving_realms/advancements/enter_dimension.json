@@ -1,0 +1,20 @@
+{
+  "display": {
+    "icon": {"id": "evolving_realms:dimension_key"},
+    "title": {"translate": "advancements.evolving_realms.enter_dimension.title"},
+    "description": {"translate": "advancements.evolving_realms.enter_dimension.description"},
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "evolving_realms:root",
+  "criteria": {
+    "enter_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "evolving_realms:sulfur_dimension"
+      }
+    }
+  }
+}

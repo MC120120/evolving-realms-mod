@@ -1,0 +1,17 @@
+{
+  "display": {
+    "icon": {"id": "evolving_realms:sulfur_crystal_item"},
+    "title": {"translate": "advancements.evolving_realms.root.title"},
+    "description": {"translate": "advancements.evolving_realms.root.description"},
+    "background": "evolving_realms:textures/gui/advancements/backgrounds/root.png",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "start": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

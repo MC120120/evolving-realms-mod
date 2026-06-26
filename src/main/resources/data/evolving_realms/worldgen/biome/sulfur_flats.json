@@ -1,0 +1,55 @@
+{
+  "has_precipitation": false,
+  "temperature": 2.0,
+  "temperature_modifier": "none",
+  "downfall": 0.0,
+  "effects": {
+    "sky_color": 7254527,
+    "fog_color": 3344392,
+    "water_color": 4159204,
+    "water_fog_color": 329011,
+    "grass_color": 9543,
+    "foliage_color": 11445088,
+    "mood_sound": {
+      "sound": "minecraft:ambient.nether_wastes.mood",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "ambient_sound": "evolving_realms:ambient.sulfur_dimension",
+    "music": {
+      "sound": "evolving_realms:music.sulfur_dimension",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": false
+    }
+  },
+  "spawners": {
+    "monster": [
+      {"type": "evolving_realms:sulfur_slime",   "weight": 100, "minCount": 2, "maxCount": 4},
+      {"type": "evolving_realms:ash_zombie",      "weight": 80,  "minCount": 2, "maxCount": 5},
+      {"type": "evolving_realms:toxic_skeleton",  "weight": 60,  "minCount": 1, "maxCount": 3},
+      {"type": "evolving_realms:burning_wolf",    "weight": 50,  "minCount": 2, "maxCount": 5},
+      {"type": "evolving_realms:lava_worm",       "weight": 20,  "minCount": 1, "maxCount": 2}
+    ],
+    "creature":      [],
+    "ambient":       [],
+    "water_creature":[],
+    "water_ambient": [],
+    "underground_water_creature": []
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    ["evolving_realms:sulfur_ore_overworld"],
+    [],
+    [],
+    []
+  ]
+}

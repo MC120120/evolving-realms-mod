@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{"tag": "evolving_realms:sulfur_logs"}],
+  "result": {"id": "evolving_realms:sulfur_planks", "count": 4}
+}

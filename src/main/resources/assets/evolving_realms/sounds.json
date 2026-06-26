@@ -1,0 +1,102 @@
+{
+  "ambient.sulfur_dimension": {
+    "category": "ambient",
+    "sounds": [{"name": "evolving_realms:ambient/sulfur_dimension", "stream": true}]
+  },
+  "ambient.sulfur_wind": {
+    "category": "ambient",
+    "sounds": [{"name": "evolving_realms:ambient/sulfur_wind"}]
+  },
+  "ambient.acid_bubbling": {
+    "category": "ambient",
+    "sounds": [{"name": "evolving_realms:ambient/acid_bubbling"}]
+  },
+  "ambient.crystal_resonance": {
+    "category": "ambient",
+    "sounds": [{"name": "evolving_realms:ambient/crystal_resonance"}]
+  },
+  "ambient.volcanic_rumble": {
+    "category": "ambient",
+    "sounds": [{"name": "evolving_realms:ambient/volcanic_rumble"}]
+  },
+  "music.sulfur_dimension": {
+    "category": "music",
+    "sounds": [{"name": "evolving_realms:music/sulfur_dimension", "stream": true}]
+  },
+  "music.boss.ancient_sulfur_titan": {
+    "category": "music",
+    "sounds": [{"name": "evolving_realms:music/boss/ancient_sulfur_titan", "stream": true}]
+  },
+  "music.boss.titan_phase_2": {
+    "category": "music",
+    "sounds": [{"name": "evolving_realms:music/boss/titan_phase_2", "stream": true}]
+  },
+  "block.sulfur.break":  {"sounds": [{"name": "evolving_realms:block/sulfur/break"}]},
+  "block.sulfur.place":  {"sounds": [{"name": "evolving_realms:block/sulfur/place"}]},
+  "block.sulfur.step":   {"sounds": [{"name": "evolving_realms:block/sulfur/step"}]},
+  "block.crystal.break": {"sounds": [{"name": "evolving_realms:block/crystal/break"}]},
+  "block.crystal.place": {"sounds": [{"name": "evolving_realms:block/crystal/place"}]},
+  "block.crystal.step":  {"sounds": [{"name": "evolving_realms:block/crystal/step"}]},
+  "block.ash.break":     {"sounds": [{"name": "evolving_realms:block/ash/break"}]},
+  "block.ash.place":     {"sounds": [{"name": "evolving_realms:block/ash/place"}]},
+  "block.ash.step":      {"sounds": [{"name": "evolving_realms:block/ash/step"}]},
+  "block.volcanic.break":{"sounds": [{"name": "evolving_realms:block/volcanic/break"}]},
+  "block.volcanic.place":{"sounds": [{"name": "evolving_realms:block/volcanic/place"}]},
+  "block.volcanic.step": {"sounds": [{"name": "evolving_realms:block/volcanic/step"}]},
+  "block.acid.burn":     {"sounds": [{"name": "evolving_realms:block/acid/burn"}]},
+  "entity.sulfur_slime.ambient": {"sounds": [{"name": "evolving_realms:entity/sulfur_slime/ambient"}]},
+  "entity.sulfur_slime.hurt":    {"sounds": [{"name": "evolving_realms:entity/sulfur_slime/hurt"}]},
+  "entity.sulfur_slime.death":   {"sounds": [{"name": "evolving_realms:entity/sulfur_slime/death"}]},
+  "entity.sulfur_slime.jump":    {"sounds": [{"name": "evolving_realms:entity/sulfur_slime/jump"}]},
+  "entity.sulfur_slime.squish":  {"sounds": [{"name": "evolving_realms:entity/sulfur_slime/squish"}]},
+  "entity.acid_spider.ambient":  {"sounds": [{"name": "evolving_realms:entity/acid_spider/ambient"}]},
+  "entity.acid_spider.hurt":     {"sounds": [{"name": "evolving_realms:entity/acid_spider/hurt"}]},
+  "entity.acid_spider.death":    {"sounds": [{"name": "evolving_realms:entity/acid_spider/death"}]},
+  "entity.acid_spider.spit":     {"sounds": [{"name": "evolving_realms:entity/acid_spider/spit"}]},
+  "entity.crystal_golem.ambient": {"sounds": [{"name": "evolving_realms:entity/crystal_golem/ambient"}]},
+  "entity.crystal_golem.hurt":    {"sounds": [{"name": "evolving_realms:entity/crystal_golem/hurt"}]},
+  "entity.crystal_golem.death":   {"sounds": [{"name": "evolving_realms:entity/crystal_golem/death"}]},
+  "entity.crystal_golem.step":    {"sounds": [{"name": "evolving_realms:entity/crystal_golem/step"}]},
+  "entity.crystal_golem.shatter": {"sounds": [{"name": "evolving_realms:entity/crystal_golem/shatter"}]},
+  "entity.toxic_skeleton.ambient": {"sounds": [{"name": "evolving_realms:entity/toxic_skeleton/ambient"}]},
+  "entity.toxic_skeleton.hurt":    {"sounds": [{"name": "evolving_realms:entity/toxic_skeleton/hurt"}]},
+  "entity.toxic_skeleton.death":   {"sounds": [{"name": "evolving_realms:entity/toxic_skeleton/death"}]},
+  "entity.toxic_skeleton.shoot":   {"sounds": [{"name": "evolving_realms:entity/toxic_skeleton/shoot"}]},
+  "entity.ash_zombie.ambient": {"sounds": [{"name": "evolving_realms:entity/ash_zombie/ambient"}]},
+  "entity.ash_zombie.hurt":    {"sounds": [{"name": "evolving_realms:entity/ash_zombie/hurt"}]},
+  "entity.ash_zombie.death":   {"sounds": [{"name": "evolving_realms:entity/ash_zombie/death"}]},
+  "entity.lava_worm.ambient":  {"sounds": [{"name": "evolving_realms:entity/lava_worm/ambient"}]},
+  "entity.lava_worm.hurt":     {"sounds": [{"name": "evolving_realms:entity/lava_worm/hurt"}]},
+  "entity.lava_worm.death":    {"sounds": [{"name": "evolving_realms:entity/lava_worm/death"}]},
+  "entity.lava_worm.burrow":   {"sounds": [{"name": "evolving_realms:entity/lava_worm/burrow"}]},
+  "entity.lava_worm.emerge":   {"sounds": [{"name": "evolving_realms:entity/lava_worm/emerge"}]},
+  "entity.lava_worm.shoot":    {"sounds": [{"name": "evolving_realms:entity/lava_worm/shoot"}]},
+  "entity.sulfur_phantom.ambient": {"sounds": [{"name": "evolving_realms:entity/sulfur_phantom/ambient"}]},
+  "entity.sulfur_phantom.hurt":    {"sounds": [{"name": "evolving_realms:entity/sulfur_phantom/hurt"}]},
+  "entity.sulfur_phantom.death":   {"sounds": [{"name": "evolving_realms:entity/sulfur_phantom/death"}]},
+  "entity.sulfur_phantom.bite":    {"sounds": [{"name": "evolving_realms:entity/sulfur_phantom/bite"}]},
+  "entity.burning_wolf.ambient": {"sounds": [{"name": "evolving_realms:entity/burning_wolf/ambient"}]},
+  "entity.burning_wolf.hurt":    {"sounds": [{"name": "evolving_realms:entity/burning_wolf/hurt"}]},
+  "entity.burning_wolf.death":   {"sounds": [{"name": "evolving_realms:entity/burning_wolf/death"}]},
+  "entity.burning_wolf.growl":   {"sounds": [{"name": "evolving_realms:entity/burning_wolf/growl"}]},
+  "entity.ancient_sulfur_titan.ambient":        {"sounds": [{"name": "evolving_realms:entity/ancient_sulfur_titan/ambient"}]},
+  "entity.ancient_sulfur_titan.hurt":           {"sounds": [{"name": "evolving_realms:entity/ancient_sulfur_titan/hurt"}]},
+  "entity.ancient_sulfur_titan.death":          {"sounds": [{"name": "evolving_realms:entity/ancient_sulfur_titan/death"}]},
+  "entity.ancient_sulfur_titan.roar":           {"sounds": [{"name": "evolving_realms:entity/ancient_sulfur_titan/roar"}]},
+  "entity.ancient_sulfur_titan.ground_slam":    {"sounds": [{"name": "evolving_realms:entity/ancient_sulfur_titan/ground_slam"}]},
+  "entity.ancient_sulfur_titan.lava_explosion": {"sounds": [{"name": "evolving_realms:entity/ancient_sulfur_titan/lava_explosion"}]},
+  "entity.ancient_sulfur_titan.crystal_spike":  {"sounds": [{"name": "evolving_realms:entity/ancient_sulfur_titan/crystal_spike"}]},
+  "entity.ancient_sulfur_titan.fire_breath":    {"sounds": [{"name": "evolving_realms:entity/ancient_sulfur_titan/fire_breath"}]},
+  "entity.ancient_sulfur_titan.phase_change":   {"sounds": [{"name": "evolving_realms:entity/ancient_sulfur_titan/phase_change"}]},
+  "entity.ancient_sulfur_titan.rage":           {"sounds": [{"name": "evolving_realms:entity/ancient_sulfur_titan/rage"}]},
+  "entity.ancient_sulfur_titan.summon_minion":  {"sounds": [{"name": "evolving_realms:entity/ancient_sulfur_titan/summon_minion"}]},
+  "entity.ancient_sulfur_titan.step":           {"sounds": [{"name": "evolving_realms:entity/ancient_sulfur_titan/step"}]},
+  "event.village.celebration": {"sounds": [{"name": "evolving_realms:event/village/celebration"}]},
+  "event.village.wedding":     {"sounds": [{"name": "evolving_realms:event/village/wedding"}]},
+  "event.village.alarm":       {"sounds": [{"name": "evolving_realms:event/village/alarm"}]},
+  "event.caravan.arrives":     {"sounds": [{"name": "evolving_realms:event/caravan/arrives"}]},
+  "event.earth.earthquake":    {"sounds": [{"name": "evolving_realms:event/earth/earthquake"}]},
+  "event.earth.volcano_erupt": {"sounds": [{"name": "evolving_realms:event/earth/volcano_erupt"}]},
+  "event.earth.wildfire":      {"sounds": [{"name": "evolving_realms:event/earth/wildfire"}]},
+  "event.earth.tree_fall":     {"sounds": [{"name": "evolving_realms:event/earth/tree_fall"}]}
+}

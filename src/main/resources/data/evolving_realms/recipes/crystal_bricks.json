@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["##", "##"],
+  "key": {"#": {"item": "evolving_realms:sulfur_crystal_item"}},
+  "result": {"id": "evolving_realms:crystal_bricks", "count": 4}
+}

@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{"item": "evolving_realms:pyrite_block"}],
+  "result": {"id": "evolving_realms:pyrite_ingot", "count": 9}
+}

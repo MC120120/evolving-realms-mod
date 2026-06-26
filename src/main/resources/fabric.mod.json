@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "evolving_realms",
+  "version": "${version}",
+  "name": "Evolving Realms",
+  "description": "A massive survival expansion featuring the Sulfur Dimension, adaptive mobs, living civilizations, a dynamic living earth, and procedurally generated dungeons.",
+  "authors": ["EvolvingRealmsTeam"],
+  "contact": {
+    "homepage": "https://github.com/evolvingreaims/evolving-realms",
+    "issues": "https://github.com/evolvingreaims/evolving-realms/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/evolving_realms/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["net.evolvingreaims.evolvingrealms.EvolvingRealms"],
+    "client": ["net.evolvingreaims.evolvingrealms.client.EvolvingRealmsClient"]
+  },
+  "mixins": ["evolving_realms.mixins.json", "evolving_realms.client.mixins.json"],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=21"
+  },
+  "suggests": {
+    "modmenu": "*",
+    "sodium": "*",
+    "lithium": "*",
+    "iris": "*"
+  }
+}

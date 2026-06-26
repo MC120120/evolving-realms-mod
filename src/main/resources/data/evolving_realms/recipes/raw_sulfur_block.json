@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["###", "###", "###"],
+  "key": {"#": {"item": "evolving_realms:raw_sulfur"}},
+  "result": {"id": "evolving_realms:raw_sulfur_block", "count": 1}
+}

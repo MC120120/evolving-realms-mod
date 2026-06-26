@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "net.evolvingreaims.evolvingrealms.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": ["GameRendererMixin", "WorldRendererMixin"],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "size": 4,
+    "discard_chance_on_air_exposure": 0.5,
+    "targets": [
+      {
+        "target": {"type": "minecraft:tag", "tag": "minecraft:deepslate_ore_replaceables"},
+        "state": {"Name": "evolving_realms:volcanium_ore"}
+      }
+    ]
+  }
+}
