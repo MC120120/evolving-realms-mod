@@ -21,3 +21,4 @@ public class VolcaniumPickaxeItem extends PickaxeItem {
         // actual smelting output defined in recipe JSON for relevant ores.
         return super.postMine(stack, world, state, pos, miner);
 }
+}
